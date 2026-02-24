@@ -1,5 +1,5 @@
 type LgCardProps = {
-  backgroundStyle: { backgrounColor: string; opacity: number };
+  backgroundStyle: { backgroundColor: string; opacity: number };
   icon: string;
   color: string;
   title: string;
@@ -15,7 +15,7 @@ type LgCardProps = {
 
 
 type LgAboveCardProps = {
-  backgroundStyle: { backgrounColor: string; opacity: number };
+  backgroundStyle: { backgroundColor: string; opacity: number };
   icon: string;
   color: string;
   title: string;
@@ -106,7 +106,7 @@ export function LgCard(props: LgCardProps) {
       <div
         className="absolute inset-0"
         style={{
-          background: backgroundStyle.backgrounColor,
+          background: backgroundStyle.backgroundColor,
           opacity: backgroundStyle.opacity,
         }}
       />

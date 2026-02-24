@@ -8,10 +8,10 @@ type FooterProps = {
 };
 
 const links = {
-  fb: "https://www.facebook.com/share/16Dfpi6PaB/?mibextid=wwXIfr",
-  ig: "https://www.instagram.com/yourregularcompany?igsh=OXE4aXVybnFxNWtj",
-  wh: "https://wa.me/918630218988",
-  li: "https://www.linkedin.com/company/your-regular-company/",
+  fb: "https://www.facebook.com/share/1GdqjfwVKj/",
+  ig: "https://www.instagram.com/dmediabuzz/",
+  wh: "https://wa.me/919311336515",
+  li: "https://www.linkedin.com/company/dmedia001/",
 }
 
 export default function Footer(props: FooterProps) {
@@ -133,11 +133,11 @@ export default function Footer(props: FooterProps) {
             </div>
           </div>
 
-          <div className="lg:ml-20 ml-0 mt-6 lg:mt-0">
+          {/* <div className="lg:ml-20 ml-0 mt-6 lg:mt-0">
             <a href="/" data-discover="true">
-              <img className="w-32 md:w-48" src="/LOGO2.png" alt="logo" />
+              <img className="w-32 md:w-48" src="/fun.png" alt="logo" />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

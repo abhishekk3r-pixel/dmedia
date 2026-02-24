@@ -4,39 +4,42 @@ import LogoCarausol from "../LogoCarausol";
 
 const cards = [
   {
-    title: "Graphic Designing",
-    description: "Crafting visual identities that resonate",
+    title: "Product Styling & Photoshoots",
+    description: " Scroll-stopping visuals that build instant brand trust.",
     imageSrc: "/Graphic Design.png",
     desktopImageSrc: "/green.webp",
-    alt: "Graphic Designing",
+    alt: "Product Styling & Photoshoots",
   },
   {
-    title: "Copywriting & Creative Writing",
-    description: "Crafting compelling narratives that captivate",
+    title: "Video Production (TVCs, DVCs, Corporate Films)",
+    description: "Cinematic stories that spark emotion and boost recall.",
     imageSrc: "/copywriting.png",
     desktopImageSrc: "/pink.webp",
-    alt: "Copywriting & Creative Writing",
+    alt: "Video Production",
   },
   {
-    title: "Website Design & SEO",
-    description: "Creating digital experiences that engage and convert",
+    title: "Social Media Management & Performance Marketing",
+    description:
+      "Creative content backed by smart ads to grow community and drive real results.",
     imageSrc: "/website.png",
     desktopImageSrc: "/orange.webp",
     alt: "Website Design & SEO",
   },
   {
-    title: "Photography & Videography",
-    description: "Capturing moments and stories with creativity",
+    title: "Animation",
+    description:
+      "Engaging visuals that simplify ideas and strengthen visibility.",
     imageSrc: "/Photography.png",
     desktopImageSrc: "/yellow.webp",
-    alt: "Photography & Videography",
+    alt: "Animation",
   },
   {
-    title: "Social Media Management & Marketing",
-    description: "Elevating your brand’s digital Presence",
+    title: "Event Management",
+    description:
+      "Capturing live moments and turning them into powerful brand stories.",
     imageSrc: "/Social media.png",
     desktopImageSrc: "/blue.webp",
-    alt: "Social Media Management & Marketing",
+    alt: "Event Management",
   },
 ];
 
@@ -51,7 +54,7 @@ export default function WhatToExpect(props: WhatToExpectProps) {
 
   function handleClick(filter: string) {
     const params = new URLSearchParams();
-    params.set("filter", "Copywriting & Creative Writing");
+    params.set("filter", filter);
 
     route.push(`/work?${params.toString()}`);
   }

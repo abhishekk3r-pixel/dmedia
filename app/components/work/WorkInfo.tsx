@@ -120,6 +120,63 @@ const workItems: WorkItem[] = [
   // (keep remaining items unchanged)
 ];
 
+const services = [
+  {
+    service: "Event Management",
+    images: [
+      "/work/w/event/1.jpeg",
+      "/work/w/event/2.jpeg",
+      "/work/w/event/3.jpeg",
+      "/work/w/event/4.jpeg",
+      "/work/w/event/5.jpeg",
+      "/work/w/event/6.jpeg",
+      "/work/w/event/7.jpeg",
+      "/work/w/event/8.jpeg",
+    ],
+    className: "bg-green-50 border-green-200",
+  },
+  {
+    service: "Product Styling & Photoshoots",
+    images: [
+      "/work/w/Photoshoot/1.png",
+      "/work/w/Photoshoot/2.png",
+      "/work/w/Photoshoot/3.png",
+      "/work/w/Photoshoot/4.png",
+      "/work/w/Photoshoot/5.png",
+      "/work/w/Photoshoot/6.png",
+      "/work/w/Photoshoot/7.png",
+      "/work/w/Photoshoot/8.png",
+      "/work/w/Photoshoot/9.png",
+      "/work/w/Photoshoot/10.png",
+      "/work/w/Photoshoot/11.png",
+      "/work/w/Photoshoot/12.png",
+    ],
+    className: "bg-orange-50 border-orange-200",
+  },
+  {
+    service: "Social Media Management & Performance Marketing",
+    images: [
+      "/work/w/social/1.png", "/work/w/social/2.png", "/work/w/social/3.png",
+      "/work/w/social/4.png", "/work/w/social/5.png", "/work/w/social/6.png",
+      "/work/w/social/7.png", "/work/w/social/8.png", "/work/w/social/9.png",
+      "/work/w/social/10.png", "/work/w/social/11.png", "/work/w/social/12.png",  
+      "/work/w/social/13.png", "/work/w/social/14.png"
+    ],
+    className: "bg-blue-100 border-blue-300",
+
+  },
+  {
+    service: "Animation",
+    images: [""],
+    className: "bg-indigo-50 border-indigo-200",
+  },
+  {
+    service: "Video Production (TVCs, DVCs, Corporate Films)",
+    images: [""],
+    className: "bg-red-50 border-red-200",
+  },
+];
+
 type FilterType = {
   filterBy: "By Service" | "By Industry";
   filterValue: ServiceKey | IndustryKey | null;
@@ -134,12 +191,17 @@ const filterByOptions = [
 ] as const;
 
 export default function WorkInfo() {
-  const searchParams = useSearchParams()
+  const searchParams = useSearchParams();
   const [filters, setFilters] = useState<FilterType>({
     filterBy: "By Service",
     filterValue: searchParams.get("filter") as ServiceKey | IndustryKey | null,
   });
 
+  const [selectedService, setSelectedServices] = useState(
+    searchParams.get("filter") || services[0].service,
+  );
+
+  console.log("seelcted service", selectedService);
 
   function handleFilterByChange(filterBy: "By Service" | "By Industry") {
     setFilters((prev) => {
@@ -151,7 +213,7 @@ export default function WorkInfo() {
   }
 
   function handleFilterValueChange(
-    filterValue: ServiceKey | IndustryKey | null
+    filterValue: ServiceKey | IndustryKey | null,
   ) {
     setFilters((prev) => {
       return {
@@ -161,27 +223,16 @@ export default function WorkInfo() {
     });
   }
 
-  const filteredWorkItems = workItems.filter((item) => {
-    if (filters.filterBy === "By Service") {
-      if (filters.filterValue === null) {
-        return true;
-      }
-      console.log("good")
-      return item.service.includes(filters.filterValue as ServiceKey);
-    } else {
-      if (filters.filterValue === null) {
-        return true;
-      }
-      return item.industry === (filters.filterValue as IndustryKey);
-    }
+  const filteredWorkItems = services.filter((item) => {
+    return item.service == selectedService;
   });
 
   console.log("filterdWorkItems", filteredWorkItems, filters);
 
   return (
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex flex-col items-center mb-12">
-          <div className="inline-flex border border-gray-300 rounded-md overflow-hidden mb-6">
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="flex flex-col items-center mb-12">
+        {/* <div className="inline-flex border border-gray-300 rounded-md overflow-hidden mb-6">
             {filterByOptions.map((option, idx) => {
               return (
                 <button
@@ -199,92 +250,88 @@ export default function WorkInfo() {
                 </button>
               );
             })}
-          </div>
-          <div className="w-full max-w-4xl">
-            <div className="flex flex-wrap justify-center gap-2">
-              {(filters.filterBy === "By Service" ? SERVICES : INDUSTRIES).map(
-                (item, idx) => {
-                  return (
-                    <p
-                      onClick={() => {
-                        handleFilterValueChange(item.label as any);
-                      }}
-                      key={idx}
-                      className={`${
-                        item.className
-                      } px-4 py-1.5 rounded-full text-xs font-medium border border-gray-300 transition-all duration-150 cursor-pointer
+          </div> */}
+        <div className="w-full max-w-4xl">
+          <div className="flex flex-wrap justify-center gap-2">
+            {services.map((item, idx) => {
+              return (
+                <p
+                  onClick={() => {
+                    setSelectedServices(item.service);
+                  }}
+                  key={idx}
+                  className={`${
+                    item.className
+                  } px-4 py-1.5 rounded-full text-xs font-medium border border-gray-300 transition-all duration-150 cursor-pointer
                         ${
-                          filters.filterValue === item.label
+                          item.service == selectedService
                             ? "ring-2 ring-black"
                             : ""
                         }
                         `}
-                    >
-                      {item.label}
-                    </p>
-                  );
-                }
-              )}
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {filteredWorkItems.map((item, idx) => {
-              return (
-                <a
-                  key={idx}
-                  href={"#"}
-                  className="block group sm:hover:transform sm:hover:-translate-y-2 transition-transform duration-300"
                 >
-                  <div className="relative flex items-center justify-center w-full h-auto aspect-square overflow-hidden bg-white rounded-lg p-0">
-                    {/* Image as background (cover) so all cards have equal heights */}
-                    <div
-                      className="absolute inset-0 bg-center bg-cover"
-                      style={{
-                        backgroundImage: `url(${item.images[0]})`,
-                      }}
-                      aria-hidden
-                    />
-
-                    {/* Gradient overlay that fades in on hover */}
-                    <div
-                      className="absolute inset-0 opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300"
-                      style={{
-                        background:
-                          "linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%)",
-                      }}
-                      aria-hidden
-                    />
-
-                    {/* Content overlay (title, services, industry) */}
-                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 p-4">
-                      <h3 className="text-xl font-semibold mb-4 text-center">
-                        {item.title}
-                      </h3>
-
-                      <div className="text-md text-center">
-                        <p className="font-medium mb-1">Services</p>
-                        {item.service.map((service, sidx) => {
-                          return (
-                            <p key={sidx} className="mb-0">
-                              {service}
-                            </p>
-                          );
-                        })}
-                        <p className="font-medium mt-12 align-bottom">
-                          Industry
-                        </p>
-                        <p className="font-semibold">{item.industry}</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
+                  {item.service}
+                </p>
               );
             })}
           </div>
         </div>
       </div>
+
+      <div>
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {filteredWorkItems[0].images.map((item, idx) => {
+            return (
+              <a
+                key={idx}
+                href={"#"}
+                className="block group sm:hover:transform sm:hover:-translate-y-2 transition-transform duration-300"
+              >
+                <div className="relative flex items-center justify-center w-full h-auto aspect-square overflow-hidden bg-white rounded-lg p-0">
+                  {/* Image as background (cover) so all cards have equal heights */}
+                  <div
+                    className="absolute inset-0 bg-center bg-cover"
+                    style={{
+                      backgroundImage: `url(${item})`,
+                    }}
+                    aria-hidden
+                  />
+
+                  {/* Gradient overlay that fades in on hover */}
+                  {/* <div
+                    className="absolute inset-0 opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300"
+                    style={{
+                      background:
+                        "linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%)",
+                    }}
+                    aria-hidden
+                  /> */}
+
+                  {/* Content overlay (title, services, industry) */}
+                  {/* <div className="absolute inset-0 flex flex-col justify-center items-center text-white opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 p-4">
+                    <h3 className="text-xl font-semibold mb-4 text-center">
+                      {item.title}
+                    </h3>
+
+                    <div className="text-md text-center">
+                      <p className="font-medium mb-1">Services</p>
+                      {item.service.map((service, sidx) => {
+                        return (
+                          <p key={sidx} className="mb-0">
+                            {service}
+                          </p>
+                        );
+                      })}
+                      <p className="font-medium mt-12 align-bottom">Industry</p>
+                      <p className="font-semibold">{item.industry}</p>
+                    </div>
+                  </div> */}
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </div>
   );
 }

@@ -135,7 +135,7 @@ export default function Header() {
                     )
                     })}
 
-                    <button
+                    {/* <button
                         className="ml-4 p-2 rounded-full hover:bg-white/30 transition-all duration-300 group"
                         title="Search website"
                     >
@@ -154,7 +154,7 @@ export default function Header() {
                             <circle cx="11" cy="11" r="8" />
                             <path d="m21 21-4.3-4.3" />
                         </svg>
-                    </button>
+                    </button> */}
                 </div>
 
                 {/* Mobile menu */}

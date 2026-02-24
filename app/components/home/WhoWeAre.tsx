@@ -1,13 +1,11 @@
+import Link from "next/link";
+
 type WhoWeAreProps = {
   isLargeScreen: boolean;
 };
 
-
 // Update values here:
-const description = `With a team of part design gurus, part marketing mavens, and a
-          sprinkle of web wizards, we're on a mission to turn your ideas into
-          visual magic.`;
-
+const description = `We’re a full-service creative and digital agency delivering social media marketing and ad films that blend strategy with storytelling. We help brands build credibility, earn trust, and drive consistent, measurable growth.`;
 
 export default function WhoWeAre(props: WhoWeAreProps) {
   const { isLargeScreen } = props;
@@ -35,17 +33,18 @@ export default function WhoWeAre(props: WhoWeAreProps) {
           className="font-medium text-xl mb-4         xl:text-4xl xl:mb-8
 "
         >
-          Your Regular Company – where design is our playground!
+          Turning deadlines into trust.
         </p>
         <p className="leading-relaxed mx-auto text-base mb-4 max-w-75">
           {description}
         </p>
-        <button
+        <Link
+          href={"/about-us"}
           className="bg-transparent text-blue-500 rounded-md hover:underline transition text-base px-4 py-2         xl:text-xl xl:px-8 xl:py-4
 "
         >
           Know More
-        </button>
+        </Link>
       </div>
     </div>
   );

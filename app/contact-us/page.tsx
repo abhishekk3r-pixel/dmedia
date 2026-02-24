@@ -9,14 +9,13 @@ export default function Page() {
   return (
     <>
       <main>
-        
         <h1 className="text-[#4B84BE] text-3xl md:text-5xl lg:text-7xl text-center leading-tight mb-12 md:mb-20 font-semibold mt-12">
-          Let's Craft Design
+          Let’s Build Bold Brands
           <br />
-          Adventures Together!
+          Dreams Into Reality!
         </h1>
-                <div className="px-4 flex justify-center items-center flex-col">
-        <Contact />
+        <div className="px-4 flex justify-center items-center flex-col">
+          {/* <Contact /> */}
         </div>
         <div className="relative px-8 w-full max-w-5xl mx-auto flex justify-center h-auto mt-10 md:mt-11 lg:mt-12">
           <div className="absolute right-4 md:right-8 -top-6 z-10">
@@ -32,21 +31,21 @@ export default function Page() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center relative z-10 gap-8 md:gap-4">
               <div>
                 <div className="text-base md:text-xl lg:text-2xl mb-2 md:mb-4">
-                  +91 81715 27777 | +91 99585 25789
+                  +91 9311336515
                 </div>
                 <div className="text-base md:text-xl lg:text-2xl">
-                  Bangalore | Delhi
+                  Plot No 1483, Huda Colony, Sector 46, Gurugram, Haryana 122003
                 </div>
               </div>
 
               <div className="flex flex-col items-start gap-2">
                 <div className="text-base md:text-xl lg:text-2xl">
-                  hey@yourregularcompany.com
+                  connect@dmediabuzz.com
                 </div>
 
                 <div className="flex gap-2 items-center mt-2">
                   <a
-                    href="https://www.facebook.com/share/16Dfpi6PaB/?mibextid=wwXIfr"
+                    href="https://www.facebook.com/share/1GdqjfwVKj/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center hover:opacity-75 cursor-pointer transition-opacity"
@@ -60,7 +59,7 @@ export default function Page() {
                   </a>
 
                   <a
-                    href="https://www.instagram.com/yourregularcompany?igsh=OXE4aXVybnFxNWtj"
+                    href="https://www.instagram.com/dmediabuzz/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center hover:opacity-75 cursor-pointer transition-opacity"
@@ -74,7 +73,7 @@ export default function Page() {
                   </a>
 
                   <a
-                    href="https://wa.me/918630218988"
+                    href="https://wa.me/919311336515"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center hover:opacity-75 cursor-pointer transition-opacity"
@@ -88,7 +87,7 @@ export default function Page() {
                   </a>
 
                   <a
-                    href="https://www.linkedin.com/company/your-regular-company/"
+                    href="https://www.linkedin.com/company/dmedia001/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center hover:opacity-75 cursor-pointer transition-opacity"
@@ -109,7 +108,6 @@ export default function Page() {
             </div>
           </div>
         </div>
-
       </main>
       <Footer isLgUp={isLgUp} />
     </>

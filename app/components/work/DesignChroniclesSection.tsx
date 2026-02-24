@@ -4,10 +4,10 @@ export default function DesignChroniclesSection() {
       <div className="max-w-4xl">
         <h1 className="mb-4">
           <div className="text-[#4B84BE] text-4xl md:text-6xl lg:text-7xl font-semibold mb-4">
-            Design Chronicles:
+            Work That Speaks Louder
           </div>
           <div className="text-[#FF81AE] text-4xl md:text-6xl lg:text-7xl font-semibold">
-            Where Ideas Meet YRC
+            Than Promises.
           </div>
         </h1>
 
@@ -19,16 +19,16 @@ export default function DesignChroniclesSection() {
       <div className="max-w-6xl">
         <div className="space-y-4 md:space-y-6">
           <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-extralight px-2 md:px-6">
-            It's not just a project page, it's the epic tale of how we sprinkle
-            magic on brands, crank up messages to 11, and cook up experiences so
-            unique, even unicorns are jealous.
+            Every project we take on is built with intention—where strategy,
+            creativity, and performance come together to create measurable,
+            lasting impact.
           </p>
 
           <div className="max-w-4xl mx-auto">
             <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-extralight px-2 md:px-6">
-              Get ready for a rollercoaster of creativity where pixels party,
-              fonts dance, and your brand becomes the coolest kid in the digital
-              playground!
+              From scroll-stopping social campaigns and high-production ad films
+              to brand launches and event highlights, our work reflects one
+              thing: results you can see and growth you can measure.
             </p>
           </div>
         </div>
