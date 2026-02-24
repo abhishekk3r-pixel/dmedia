@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+html,
+body {
+  background-color: white;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 820px) and (max-width: 1024px) {
+  .mobile-cards {
+    gap: 10px;
+  }
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    animation-duration: 15s;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1025px) {
+  .cards-container {
+    gap: 1 !important;
+  }
+}
+
+/* control the  From the client section speed from here */
+.scroll-wrapper {
+  animation: scrollLeft 40s linear infinite !important;
+  width: max-content;
+}
+
+.scroll-wrapper.paused {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 2240px) {
+  .testimonial-img {
+    width: 22vw !important;
+    height: 380px !important;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
