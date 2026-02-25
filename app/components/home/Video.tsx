@@ -4,8 +4,9 @@ type VideoProps = {
 
 
 // ASK: DesktopVideo and MobileVideo for home page
-const DesktopVideo = "/home/video/desktop.mp4";
-const MobileVideo = "/home/video/mobile.mp4";
+const DesktopVideo = "/home/video/d.mp4";
+const MobileVideo = "/home/video/m.mp4";
+
 
 export default function Video(props: VideoProps) {
     const { loadBigger } = props;

@@ -59,7 +59,7 @@ export default function Footer(props: FooterProps) {
                 onSubmit={handleSubmit}
                 className="flex flex-col lg:flex-row items-center max-w-3xl w-full space-y-4 lg:space-y-0 lg:space-x-4"
               >
-                <div className="flex flex-col lg:flex-row w-full max-w-md">
+                {/* <div className="flex flex-col lg:flex-row w-full max-w-md">
                   <label htmlFor="newsletter-email" className="sr-only">
                     Email address
                   </label>
@@ -81,9 +81,9 @@ export default function Footer(props: FooterProps) {
                   >
                     Submit
                   </button>
-                </div>
+                </div> */}
 
-                <div className="flex space-x-4 mt-2 lg:mt-0 text-white">
+                <div className="flex space-x-4 mt-2 lg:mt-0 text-white mx-auto" >
                   <a
                     href={links.fb}
                     target="_blank"
