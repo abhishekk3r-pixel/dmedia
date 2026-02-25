@@ -28,12 +28,12 @@ const testimonialImages = [
 export default function FromOurClients() {
   return (
     <div className="max-w-full mx-auto pt-0 pb-24 overflow-hidden 2xl:pt-32 2xl:pb-48">
-      <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-semibold mb-8 sm:mb-0">
+      {/* <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-semibold mb-8 sm:mb-0">
         <span className="text-[#D75835]">From our</span>{" "}
         <span className="text-[#4B84BE]">Clients</span>
-      </h2>
+      </h2> */}
 
-      <div className="w-full overflow-hidden relative xs:mt-8">
+      {/* <div className="w-full overflow-hidden relative xs:mt-8">
         <div className="scroll-wrapper flex space-x-4 ">
           {testimonialImages.map((_, index) => {
             return (
@@ -48,7 +48,7 @@ export default function FromOurClients() {
             );
           })}
         </div>
-      </div>
+      </div> */}
 
       <div className="text-center pb-4 md:px-0">
         <h1 className="text-[22px] sm:text-5xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold mt-8">

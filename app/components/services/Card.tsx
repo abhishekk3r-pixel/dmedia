@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type LgCardProps = {
   backgroundStyle: { backgroundColor: string; opacity: number };
   icon: string;
@@ -6,13 +8,6 @@ type LgCardProps = {
   description: string;
   list: string[];
 };
-
-
-
-
-
-
-
 
 type LgAboveCardProps = {
   backgroundStyle: { backgroundColor: string; opacity: number };
@@ -76,12 +71,13 @@ export function LgAboveCard(props: LgAboveCardProps) {
             })}
           </ul>
           <div className="flex flex-row gap-3 w-[270px]">
-            <button
+            <Link
+              href={"/contact-us"}
               className="px-4 py-2 text-white hover:opacity-90 transition w-1/2 "
               style={{ backgroundColor: color }}
             >
               Contact Us
-            </button>
+            </Link>
             <button
               className="px-4 py-2 text-white hover:opacity-90 transition w-1/2 "
               style={{ backgroundColor: color }}
@@ -95,11 +91,8 @@ export function LgAboveCard(props: LgAboveCardProps) {
   );
 }
 
-
-
 export function LgCard(props: LgCardProps) {
-  const { backgroundStyle, icon, color, title, description, list } =
-    props;
+  const { backgroundStyle, icon, color, title, description, list } = props;
   return (
     <div className="relative h-full w-auto mx-auto mb-6 pt-6 pr-6 pl-6 pb-12 overflow-visible">
       {/* Background overlay */}
@@ -143,12 +136,13 @@ export function LgCard(props: LgCardProps) {
           </ul>
 
           <div className="flex gap-3 w-full">
-            <button
+            <Link
+              href={"/contact-us"}
               className="px-4 py-2 text-white hover:opacity-90 transition w-1/2"
               style={{ backgroundColor: color }}
             >
               Contact Us
-            </button>
+            </Link>
 
             <button
               className="px-4 py-2 text-white hover:opacity-90 transition w-1/2"

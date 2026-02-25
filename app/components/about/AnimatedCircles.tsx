@@ -13,7 +13,7 @@ const imageAnimations = [
       "left-2 bottom-40 sm:left-48 sm:top-0 md:left-[35%] md:top-10  lg:left-[30%] lg:top-10",
   },
   {
-    src: "/person2.png",
+    src: "/work/w/Founders/1.png",
     alt: "Circle 10",
     dimension: "w-10 sm:w-20 md:w-32",
     style: {
@@ -36,7 +36,7 @@ const imageAnimations = [
       "left-4 sm:left-12 md:left-2 top-64 md:top-2  lg:left-10 lg:top-24",
   },
   {
-    src: "/person_1.png",
+    src: "/work/w/Founders/2.png",
     alt: "Circle 4",
     dimension: "w-10 sm:w-20 md:w-32",
     style: {
@@ -47,9 +47,9 @@ const imageAnimations = [
       "left-1/4 sm:right-2/3 top-0 md:top-2 md:left-[15%] lg:left-[15%] lg:top-16",
   },
   {
-    src: "/a1.png",
+    src: "/pink.png",
     alt: "Circle 5",
-    dimension: "w-8 sm:w-16 md:w-24",
+    dimension: "w-8 sm:w-24 md:w-24",
     style: {
       transitionDelay: "674.011ms",
       animation: "2s ease-in-out 250.514ms infinite normal none running float",
@@ -91,7 +91,7 @@ const imageAnimations = [
       "right-48 sm:right-20 md:right-12 bottom-40 md:top-[140%] lg:right-64 lg:top-72",
   },
   {
-    src: "/a5.svg",
+    src: "/work/w/Founders/vikram.jpeg",
     alt: "Circle 9",
     dimension: "w-10 sm:w-20 md:w-32",
     style: {
@@ -99,7 +99,7 @@ const imageAnimations = [
       animation: "2s ease-in-out 245.348ms infinite normal none running float",
     },
     position:
-      "left-20 sm:left-1/3 top-48 md:top-96 md:left-[15%] lg:left-[15%] lg:top-[110%]",
+      "left-40 sm:left-1/3 top-48 md:top-96 md:left-[15%] lg:left-[15%] lg:top-[110%]",
   },
   {
     src: "/pink.png",
@@ -147,7 +147,7 @@ const imageAnimationsDesktop = [
     position: "left-2 bottom-40 sm:left-48 sm:top-0 md:left-[35%]",
   },
   {
-    src: "/person2.png",
+    src: "/work/w/Founders/2.png",
     alt: "Circle 10",
     dimension: "w-10 sm:w-20 md:w-32",
     style: {
@@ -167,7 +167,7 @@ const imageAnimationsDesktop = [
     position: "left-4 sm:left-12 md:left-6 top-64 md:top-2",
   },
   {
-    src: "/person_1.png",
+    src: "/work/w/Founders/vikram.jpeg",
     alt: "Circle 4",
     dimension: "w-10 sm:w-20 md:w-32",
     style: {
@@ -178,9 +178,9 @@ const imageAnimationsDesktop = [
     position: "left-1/4 sm:right-2/3 top-0 md:top-2 md:left-[15%]",
   },
   {
-    src: "/a1.png",
+    src: "/pink.png",
     alt: "Circle 5",
-    dimension: "w-8 sm:w-16 md:w-24",
+    dimension: "w-8 sm:w-24 md:w-48",
     style: {
       transitionDelay: "322.068ms",
       animation: "2s ease-in-out 834.826ms infinite normal none running float",
@@ -218,7 +218,7 @@ const imageAnimationsDesktop = [
     position: "right-48 sm:right-20 md:right-12 bottom-40 md:top-[140%]",
   },
   {
-    src: "/a5.svg",
+    src: "/work/w/Founders/1.png",
     alt: "Circle 9",
     dimension: "w-10 sm:w-20 md:w-32",
     style: {
@@ -278,7 +278,7 @@ export default function AnimatedCircles(props: AnimatedCirclesProps) {
             className="text-4xl sm:text-6xl md:text-[80px] font-bold text-[#4B84BE] opacity-0 transform translate-y-4 animate-fade-in-up animation-delay-200 font-sans"
             id="blue"
           >
-            Your Regular Company
+            The D-media Company
           </h2>
         </div>
         {(isLgUp ? imageAnimationsDesktop : imageAnimations).map(

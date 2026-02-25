@@ -1,7 +1,7 @@
 "use client";
 
-const founderPic = "/founderpic.webp";
-const founderName = "Soha Parvez";
+const founderPic = "/work/w/Founders/founder.jpeg";
+const founderName = "Anshu Rana";
 const info = {
   desc1: "Not just a graphic designer but the visionary force behind Your Regular Company.",
   desc2: `colorful personality and
@@ -13,7 +13,7 @@ const info = {
 
 export default function Founder() {
   return (
-    <div className="flex flex-col xl:flex-row justify-between items-center lg:items-start w-full gap-12 md:gap-8">
+    <div className="flex flex-col xl:flex-row justify-between items-center w-full gap-12 md:gap-8">
       <div className="flex flex-col space-y-6 md:space-y-8 w-full md:max-w-2xl order-2 xl:order-1">
         <h1
           className="text-4xl md:text-6xl lg:text-7xl font-bold text-center lg:text-left"
